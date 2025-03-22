@@ -3,6 +3,7 @@ wwwroot\css\site .css
 wwwroot\favicon.ico
 wwwroot\img\login\Asus.jpg
 wwwroot\img\login\LogoLogin.png
+wwwroot\js\qrcode.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

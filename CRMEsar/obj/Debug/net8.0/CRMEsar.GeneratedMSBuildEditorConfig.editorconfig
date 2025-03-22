@@ -36,12 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/GAMER/source/repos/SolucionCRMEsar/CRMEsar/Areas/User/Views/Home/ActivarAutenticador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEFjdGl2YXJBdXRlbnRpY2Fkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/GAMER/source/repos/SolucionCRMEsar/CRMEsar/Areas/User/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GAMER/source/repos/SolucionCRMEsar/CRMEsar/Areas/User/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/GAMER/source/repos/SolucionCRMEsar/CRMEsar/Areas/User/Views/Home/VerificarCodigoAutenticador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXFZlcmlmaWNhckNvZGlnb0F1dGVudGljYWRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GAMER/source/repos/SolucionCRMEsar/CRMEsar/Areas/User/Views/_ViewImports.cshtml]

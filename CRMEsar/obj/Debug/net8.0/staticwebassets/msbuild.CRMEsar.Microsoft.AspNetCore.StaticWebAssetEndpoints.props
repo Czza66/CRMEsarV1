@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CRMEsar.qadte1wzf5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-buWh4Wwu0lSk3dFsImBImRvaf8smV86LpJJLNXvd298="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2255"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022buWh4Wwu0lSk3dFsImBImRvaf8smV86LpJJLNXvd298=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 14:17:32 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2255"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022buWh4Wwu0lSk3dFsImBImRvaf8smV86LpJJLNXvd298=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 20:47:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CRMEsar/CRMEsar.qadte1wzf5.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CRMEsar.qadte1wzf5.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qadte1wzf5"},{"Name":"integrity","Value":"sha256-buWh4Wwu0lSk3dFsImBImRvaf8smV86LpJJLNXvd298="},{"Name":"label","Value":"_content/CRMEsar/CRMEsar.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2255"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022buWh4Wwu0lSk3dFsImBImRvaf8smV86LpJJLNXvd298=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 14:17:32 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2255"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022buWh4Wwu0lSk3dFsImBImRvaf8smV86LpJJLNXvd298=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 20:47:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CRMEsar/css/site .css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site .css'))</AssetFile>
@@ -71,6 +71,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-RElih57YmzN4eParRhCbRoe\u002BmxWJT5O0eTLNjSbA2PQ="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"8703"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022RElih57YmzN4eParRhCbRoe\u002BmxWJT5O0eTLNjSbA2PQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 01:21:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CRMEsar/js/qrcode.28yq9sd61h.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\qrcode.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"28yq9sd61h"},{"Name":"integrity","Value":"sha256-Puct6facZo\u002BVZzY6k1jflVlguukADZ69ZkFGcPiOhzU="},{"Name":"label","Value":"_content/CRMEsar/js/qrcode.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"33168"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Puct6facZo\u002BVZzY6k1jflVlguukADZ69ZkFGcPiOhzU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 18:55:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/CRMEsar/js/qrcode.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\qrcode.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Puct6facZo\u002BVZzY6k1jflVlguukADZ69ZkFGcPiOhzU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"33168"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Puct6facZo\u002BVZzY6k1jflVlguukADZ69ZkFGcPiOhzU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Mar 2025 18:55:48 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CRMEsar/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>

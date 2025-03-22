@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\img\\login\\LogoLogin.png"
     },
     {
+      "Id": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\wwwroot\\js\\qrcode.js",
+      "PackagePath": "staticwebassets\\js\\qrcode.js"
+    },
+    {
       "Id": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

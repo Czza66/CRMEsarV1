@@ -1,6 +1,7 @@
 using CRMEsar.AccesoDatos.Data.Repository;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
 using CRMEsar.Data;
+using CRMEsar.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,8 +15,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 //Agregamos el servicio de Identity a la aplicacion
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddControllersWithViews();
 
@@ -41,6 +43,11 @@ app.MapControllerRoute(
     name: "registro",
     pattern: "registro",
     defaults: new { area = "User", controller = "Home", action = "Register" });
+
+app.MapControllerRoute(
+    name: "authenticator",
+    pattern: "authenticator",
+    defaults: new { area = "User", controller = "Home", action = "VerificarCodigoAutenticador" });
 
 
 app.UseHttpsRedirection();

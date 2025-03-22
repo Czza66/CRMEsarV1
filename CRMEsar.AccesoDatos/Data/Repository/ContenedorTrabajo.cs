@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
 using CRMEsar.Data;
+using CRMEsar.Models;
 
 namespace CRMEsar.AccesoDatos.Data.Repository
 {
@@ -16,8 +17,10 @@ namespace CRMEsar.AccesoDatos.Data.Repository
         {
             _db = db;
             //Aca debemos pasar los modelos puestos en el IContenedorTrabajo
+            Estado = new EstadoRepository(_db);
         }
 
+        public IEstadoRepository Estado { get; private set; }
 
         public void Dispose()
         {
@@ -28,5 +31,6 @@ namespace CRMEsar.AccesoDatos.Data.Repository
         {
             _db.SaveChanges();
         }
+
     }
 }

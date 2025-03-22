@@ -280,8 +280,8 @@ C:\Users\GAMER\source\repos\CRMEsar\obj\Debug\net8.0\ref\CRMEsar.dll
 C:\Users\GAMER\source\repos\CRMEsar\obj\Debug\net8.0\CRMEsar.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\appsettings.json
-C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\CRMEsar.staticwebassets.endpoints.json
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\CRMEsar.staticwebassets.runtime.json
+C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\CRMEsar.staticwebassets.endpoints.json
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\CRMEsar.exe
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\CRMEsar.deps.json
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\bin\Debug\net8.0\CRMEsar.runtimeconfig.json
@@ -538,6 +538,7 @@ C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\CRMEsar.Mvc
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\CRMEsar.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\CRMEsar.RazorAssemblyInfo.cache
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\CRMEsar.RazorAssemblyInfo.cs
+C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\CRMEsar.sourcelink.json
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\scopedcss\Views\Shared\_LayoutLogin.cshtml.rz.scp.css
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar\obj\Debug\net8.0\scopedcss\bundle\CRMEsar.styles.css

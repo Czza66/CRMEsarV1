@@ -30,6 +30,7 @@ C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\CRMEsar.AccesoDatos.AssemblyInfoInputs.cache
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\CRMEsar.AccesoDatos.AssemblyInfo.cs
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\CRMEsar.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\CRMEsar.AccesoDatos.sourcelink.json
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\CRMEsar..4F929E63.Up2Date
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\CRMEsar.AccesoDatos.dll
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.AccesoDatos\obj\Debug\net8.0\refint\CRMEsar.AccesoDatos.dll

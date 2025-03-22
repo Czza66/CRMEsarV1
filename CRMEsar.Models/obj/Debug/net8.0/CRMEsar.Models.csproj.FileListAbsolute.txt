@@ -22,3 +22,4 @@ C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Models\obj\Debug\net8.0\CRME
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Models\obj\Debug\net8.0\refint\CRMEsar.Models.dll
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Models\obj\Debug\net8.0\CRMEsar.Models.pdb
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Models\obj\Debug\net8.0\ref\CRMEsar.Models.dll
+C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Models\obj\Debug\net8.0\CRMEsar.Models.sourcelink.json

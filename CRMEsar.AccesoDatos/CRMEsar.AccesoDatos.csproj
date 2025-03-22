@@ -21,4 +21,8 @@
     <ProjectReference Include="..\CRMEsar.Utilidades\CRMEsar.Utilidades.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,10 @@
-﻿@{
+﻿@using CRMEsar.Models
+@using CRMEsar.Models.ViewModels
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@model AccesoVM
+
+@{
     ViewData["Title"] = "Iniciar Sesión";
 }
 
@@ -30,31 +36,46 @@
             </div>
         </div>
 
-        <!-- Login -->
-        <div class="col-lg-5 p-4 bg-white d-flex flex-column justify-content-center">
-            <div class="text-center mb-3">
-                <img src="~/img/login/LogoLogin.png" alt="Logo Fundación Orientame" style="max-height: 50px;" />
+            <!-- Login -->
+            <div class="col-lg-5 p-4 bg-white d-flex flex-column justify-content-center">
+                <div class="text-center mb-3">
+                    <img src="~/img/login/LogoLogin.png" alt="Logo Fundación Orientame" style="max-height: 50px;" />
+                </div>
+                <p class="text-center text-muted">Bienvenido, ingresa tus credenciales</p>
+
+                <form method="post" asp-controller="Home" asp-action="Acceso">
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <div class="mb-3">
+                        <label asp-for="Email" class="form-label">Usuario</label>
+                        <input asp-for="Email" type="text" class="form-control" required />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">Contraseña</label>
+                        <input asp-for="Password" type="password" class="form-control" required autocomplete="off" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <div class="custom-check">
+                            <label asp-for="RememberMe">
+                                <input asp-for="RememberMe" />
+                                @Html.DisplayNameFor(m => m.RememberMe)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Autenticate &nbsp; <i class="bi bi-file-lock2-fill"></i></button>
+                    </div>
+                </form>
+
+                <p class="text-center mt-3">
+                    <a asp-controller="Home" asp-action="Register" class="text-decoration-none text-muted">¿Olvidaste tu contraseña?</a>
+                </p>
             </div>
-            <p class="text-center text-muted">Bienvenido, ingresa tus credenciales</p>
-
-            <form method="post">
-                <div class="mb-3">
-                    <label for="username" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="username" name="username" required />
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" required />
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
-                </div>
-            </form>
-
-            <p class="text-center mt-3">
-                <a asp-controller="Home" asp-action="Register" class="text-decoration-none text-muted">¿Olvidaste tu contraseña?</a>
-            </p>
-        </div>
-
     </div>
 </div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
