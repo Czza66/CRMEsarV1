@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRMEsar.Models.ViewModels
+namespace CRMEsar.Models.ViewModels.Login
 {
     public class AccesoVM
     {

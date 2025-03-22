@@ -3,11 +3,12 @@ using System.Security.Claims;
 using System.Security.Policy;
 using System.Text.Encodings.Web;
 using CRMEsar.Models;
-using CRMEsar.Models.ViewModels;
+using CRMEsar.Models.ViewModels.Login;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Routing.Template;
 
 namespace CRMEsar.Areas.User.Controllers
 {
@@ -84,8 +85,8 @@ namespace CRMEsar.Areas.User.Controllers
                 var user = await _userManager.FindByEmailAsync(Login.Email);
                 if (user == null)
                 {
-                    ModelState.AddModelError(string.Empty, "El usuario no existe.");
-                    return View(Login);
+                    TempData["ErrorLogin"] = "Error al Iniciar Sesion, intentelo de nuevo";
+                    return RedirectToAction(nameof(Index));
                 }
 
                 var resultado = await _signInManager.PasswordSignInAsync(user, Login.Password, Login.RememberMe, lockoutOnFailure: true);
@@ -110,7 +111,8 @@ namespace CRMEsar.Areas.User.Controllers
                     return View("Bloqueado");
                 }
 
-                ModelState.AddModelError(string.Empty, "Acceso inválido");
+                TempData["ErrorLogin"] = "Error al Iniciar Sesion, intentelo de nuevo";
+                return RedirectToAction(nameof(Index));
             }
 
             return View(Login);

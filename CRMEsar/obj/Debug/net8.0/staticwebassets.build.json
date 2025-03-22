@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2plziSWEijqOoq6ll+w6Nh5RuA64rYjdidZNXAGDIn0=",
+  "Hash": "Dyx18Y1WxEHHdr1hp/hxl2Q2UTbt4z5Sk6V2vS3RDx4=",
   "Source": "CRMEsar",
   "BasePath": "_content/CRMEsar",
   "Mode": "Default",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d8smf63whx",
-      "Integrity": "ba/aKsVm6ogbD/mlIDhe4AnufToIxUXjzRfW/W4qo5Y=",
+      "Fingerprint": "gfoce6yg05",
+      "Integrity": "rMy3tB9qyWkQpPRQIgltHM3hOrLYTun1Yj4krbPUQMw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\_LayoutLogin.css"
@@ -2687,7 +2687,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 20:47:35 GMT"
+          "Value": "Sat, 22 Mar 2025 23:05:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2724,7 +2724,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 20:47:35 GMT"
+          "Value": "Sat, 22 Mar 2025 23:05:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2769,7 +2769,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 20:47:35 GMT"
+          "Value": "Sat, 22 Mar 2025 23:05:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2814,7 +2814,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 20:47:35 GMT"
+          "Value": "Sat, 22 Mar 2025 23:05:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2839,7 +2839,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "964"
+          "Value": "2626"
         },
         {
           "Name": "Content-Type",
@@ -2847,11 +2847,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ba/aKsVm6ogbD/mlIDhe4AnufToIxUXjzRfW/W4qo5Y=\""
+          "Value": "\"rMy3tB9qyWkQpPRQIgltHM3hOrLYTun1Yj4krbPUQMw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 02:26:38 GMT"
+          "Value": "Sat, 22 Mar 2025 23:26:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2861,12 +2861,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ba/aKsVm6ogbD/mlIDhe4AnufToIxUXjzRfW/W4qo5Y="
+          "Value": "sha256-rMy3tB9qyWkQpPRQIgltHM3hOrLYTun1Yj4krbPUQMw="
         }
       ]
     },
     {
-      "Route": "css/_LayoutLogin.d8smf63whx.css",
+      "Route": "css/_LayoutLogin.gfoce6yg05.css",
       "AssetFile": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\wwwroot\\css\\_LayoutLogin.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2876,7 +2876,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "964"
+          "Value": "2626"
         },
         {
           "Name": "Content-Type",
@@ -2884,11 +2884,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ba/aKsVm6ogbD/mlIDhe4AnufToIxUXjzRfW/W4qo5Y=\""
+          "Value": "\"rMy3tB9qyWkQpPRQIgltHM3hOrLYTun1Yj4krbPUQMw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 02:26:38 GMT"
+          "Value": "Sat, 22 Mar 2025 23:26:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2898,7 +2898,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "d8smf63whx"
+          "Value": "gfoce6yg05"
         },
         {
           "Name": "label",
@@ -2906,7 +2906,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ba/aKsVm6ogbD/mlIDhe4AnufToIxUXjzRfW/W4qo5Y="
+          "Value": "sha256-rMy3tB9qyWkQpPRQIgltHM3hOrLYTun1Yj4krbPUQMw="
         }
       ]
     },

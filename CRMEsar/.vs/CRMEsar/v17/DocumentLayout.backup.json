@@ -9,17 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\user\\views\\home\\verificarcodigoautenticador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\user\\views\\home\\verificarcodigoautenticador.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA267D5B-514C-475A-954B-1B15F82CD919}|..\\CRMEsar.Models\\CRMEsar.Models.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar.models\\viewmodels\\accesovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 245,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADEAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T21:08:30.301Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -52,35 +28,9 @@
               "RelativeDocumentMoniker": "Areas\\User\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Areas\\User\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADYAAAB1AAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T21:07:52.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VerificarCodigoAutenticador.cshtml",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Views\\Home\\VerificarCodigoAutenticador.cshtml",
-              "RelativeDocumentMoniker": "Areas\\User\\Views\\Home\\VerificarCodigoAutenticador.cshtml",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Views\\Home\\VerificarCodigoAutenticador.cshtml",
-              "RelativeToolTip": "Areas\\User\\Views\\Home\\VerificarCodigoAutenticador.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T21:00:46.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccesoVM.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar.Models\\ViewModels\\AccesoVM.cs",
-              "RelativeDocumentMoniker": "..\\CRMEsar.Models\\ViewModels\\AccesoVM.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar.Models\\ViewModels\\AccesoVM.cs",
-              "RelativeToolTip": "..\\CRMEsar.Models\\ViewModels\\AccesoVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T20:40:09.49Z",
+              "WhenOpened": "2025-03-22T23:43:21.821Z",
               "EditorCaption": ""
             },
             {
@@ -91,9 +41,9 @@
               "RelativeDocumentMoniker": "Areas\\User\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Areas\\User\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAArwOAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAIA5wMoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T20:38:31.762Z",
+              "WhenOpened": "2025-03-22T23:12:05.457Z",
               "EditorCaption": ""
             }
           ]

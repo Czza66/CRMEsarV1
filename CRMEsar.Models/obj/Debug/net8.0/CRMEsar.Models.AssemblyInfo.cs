@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMEsar.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e1841c10c2107b7aae05d70d0dcb18ea3a99571")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ead3b60abd98255f815ec6d079e6247528f4b47d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMEsar.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMEsar.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

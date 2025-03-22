@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRMEsar.Models.ViewModels
+namespace CRMEsar.Models.ViewModels.Login
 {
     public class AutenticacionDosFactoresVM
     {
         //Acceso (Login)
         [Required]
-        [Display(Name ="Codigo del Autenticador")]
+        [Display(Name = "Codigo del Autenticador")]
         public string code { get; set; }
 
         //Para el registro
