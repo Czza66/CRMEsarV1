@@ -10,7 +10,7 @@ namespace CRMEsar.AccesoDatos.Data.Repository.IRepository
     public interface IRepository<T> where T : class
     {
         //Obtener registro por su ID
-        T Get(int id);
+        T Get(Guid id);
 
         //Lista de Registros
         IQueryable<T> GetAll(
@@ -29,7 +29,7 @@ namespace CRMEsar.AccesoDatos.Data.Repository.IRepository
         void Add(T entity);
 
         //Eliminar un registro
-        void Remove(int id);
+        void Remove(Guid id);
 
         //Eliminar un registro por entidad
         void Remove(T entity);

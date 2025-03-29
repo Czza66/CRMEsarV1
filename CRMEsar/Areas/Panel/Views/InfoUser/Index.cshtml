@@ -1,0 +1,42 @@
+﻿@model CRMEsar.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "Mi Perfil";
+}
+
+<div class="mb-4">
+    <div class="card-body">
+        <div class="text-center mb-4">
+            <img src="~/@Model.fotoUser" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Foto de perfil">
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="fw-bold">Nombres:</label>
+                <div>@Model.Nombre1 @Model.Nombre2</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="fw-bold">Apellidos:</label>
+                <div>@Model.Apellido1 @Model.Apellido2</div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="fw-bold">Correo electrónico:</label>
+                <div>@Model.Email</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="fw-bold">Número de documento:</label>
+                <div>@Model.NumeroDocumento</div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label class="fw-bold">Fecha de registro:</label>
+                <div>@Model.FechaRegistro.ToString("dd/MM/yyyy")</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="fw-bold">Estado:</label>
+                <div>@Model.Estado?.Nombre</div> <!-- Asumiendo que tienes navegación hacia Estado -->
+            </div>
+        </div>
+    </div>
+</div>

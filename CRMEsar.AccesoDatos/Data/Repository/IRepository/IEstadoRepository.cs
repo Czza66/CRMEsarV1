@@ -7,8 +7,8 @@ using CRMEsar.Models;
 
 namespace CRMEsar.AccesoDatos.Data.Repository.IRepository
 {
-    public interface IEstadoRepository :IRepository<Estado>
+    public interface IEstadoRepository :IRepository<Estados>
     {
-        void Update(Estado estado);
+        void Update(Estados estado);
     }
 }

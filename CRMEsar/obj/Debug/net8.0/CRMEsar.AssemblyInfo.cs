@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMEsar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ead3b60abd98255f815ec6d079e6247528f4b47d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2e54fdeeb689b22bccd975d0367526ce7c7afb")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMEsar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMEsar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

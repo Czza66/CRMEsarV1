@@ -10,6 +10,7 @@ namespace CRMEsar.AccesoDatos.Data.Repository.IRepository
     {
         //Aca se deben ir agregando los diferentes repositorios
         IEstadoRepository Estado { get; }
+        IEntidadRepository Entidad { get; }
 
         void Save();
     }

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\panel\\controllers\\estadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\panel\\controllers\\estadoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\panel\\views\\estados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\panel\\views\\estados\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\panel\\views\\estados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\panel\\views\\estados\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 245,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Areas\\User\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Areas\\User\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEgAAAAvAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Views\\Estados\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Panel\\Views\\Estados\\Index.cshtml",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Views\\Estados\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Panel\\Views\\Estados\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T23:43:21.821Z",
+              "WhenOpened": "2025-03-29T22:11:07.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Views\\Estados\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Panel\\Views\\Estados\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Views\\Estados\\Edit.cshtml",
+              "RelativeToolTip": "Areas\\Panel\\Views\\Estados\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-29T21:22:07.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Areas\\User\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\User\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Areas\\User\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAIA5wMoAAAAAAAAAAAAAAA==",
+              "Title": "EstadosController.cs",
+              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Controllers\\EstadosController.cs",
+              "RelativeDocumentMoniker": "Areas\\Panel\\Controllers\\EstadosController.cs",
+              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Controllers\\EstadosController.cs",
+              "RelativeToolTip": "Areas\\Panel\\Controllers\\EstadosController.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAnwHUAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T23:12:05.457Z",
+              "WhenOpened": "2025-03-29T20:20:47.252Z",
               "EditorCaption": ""
             }
           ]

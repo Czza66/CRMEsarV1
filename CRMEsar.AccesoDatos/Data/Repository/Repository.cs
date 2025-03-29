@@ -25,7 +25,7 @@ namespace CRMEsar.AccesoDatos.Data.Repository
             dbset.Add(entity);
         }
 
-        public T Get(int id)
+        public T Get(Guid id)
         {
             return dbset.Find(id);
         }
@@ -83,7 +83,7 @@ namespace CRMEsar.AccesoDatos.Data.Repository
 
         }
 
-        public void Remove(int id)
+        public void Remove(Guid id)
         {
             T entityToRemove = dbset.Find(id);
             dbset.Remove(entityToRemove);

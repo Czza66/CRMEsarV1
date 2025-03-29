@@ -18,9 +18,11 @@ namespace CRMEsar.AccesoDatos.Data.Repository
             _db = db;
             //Aca debemos pasar los modelos puestos en el IContenedorTrabajo
             Estado = new EstadoRepository(_db);
+            Entidad = new EntidadRepository(_db);
         }
 
         public IEstadoRepository Estado { get; private set; }
+        public IEntidadRepository Entidad { get; private set; }
 
         public void Dispose()
         {

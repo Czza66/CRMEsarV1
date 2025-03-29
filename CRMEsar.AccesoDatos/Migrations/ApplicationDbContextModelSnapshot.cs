@@ -109,6 +109,9 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("fotoUser")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EstadoId");
@@ -124,7 +127,28 @@ namespace CRMEsar.AccesoDatos.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("CRMEsar.Models.Estado", b =>
+            modelBuilder.Entity("CRMEsar.Models.Entidades", b =>
+                {
+                    b.Property<Guid>("EntidadId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("EntidadId");
+
+                    b.ToTable("Entidad");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Estados", b =>
                 {
                     b.Property<Guid>("EstadoId")
                         .ValueGeneratedOnAdd()
@@ -137,6 +161,9 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
+
+                    b.Property<Guid>("EntidadId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime2");
@@ -152,6 +179,8 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("EstadoId");
+
+                    b.HasIndex("EntidadId");
 
                     b.ToTable("Estado");
                 });
@@ -289,11 +318,22 @@ namespace CRMEsar.AccesoDatos.Migrations
 
             modelBuilder.Entity("CRMEsar.Models.ApplicationUser", b =>
                 {
-                    b.HasOne("CRMEsar.Models.Estado", "Estado")
+                    b.HasOne("CRMEsar.Models.Estados", "Estado")
                         .WithMany("ApplicationUser")
                         .HasForeignKey("EstadoId");
 
                     b.Navigation("Estado");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Estados", b =>
+                {
+                    b.HasOne("CRMEsar.Models.Entidades", "Entidad")
+                        .WithMany("Estados")
+                        .HasForeignKey("EntidadId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Entidad");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -347,7 +387,12 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CRMEsar.Models.Estado", b =>
+            modelBuilder.Entity("CRMEsar.Models.Entidades", b =>
+                {
+                    b.Navigation("Estados");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Estados", b =>
                 {
                     b.Navigation("ApplicationUser");
                 });

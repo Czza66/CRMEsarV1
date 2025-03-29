@@ -20,12 +20,11 @@ namespace CRMEsar.Models
         public DateTime FechaRegistro { get; set; }
         public DateTime FechaModificacion { get; set; }
         public int CuentaID { get; set; }
+        public string? fotoUser { get; set; }
 
         //Campos Foraneos
-
-        //Relacion de muchos a uno con estados - 1Estados *Usuarios
-        public Guid? EstadoId {  get; set; }
         [ForeignKey("EstadoId")]
-        public Estado? Estado { get; set; }
+        public Guid? EstadoId { get; set; }
+        public Estados? Estado { get; set; }
     }
 }

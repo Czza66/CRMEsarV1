@@ -2,6 +2,7 @@ using CRMEsar.AccesoDatos.Data.Repository;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
 using CRMEsar.Data;
 using CRMEsar.Models;
+using CRMEsar.Utilidades;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,10 +17,23 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 //Agregamos el servicio de Identity a la aplicacion
 builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
+    .AddRoles<IdentityRole<Guid>>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
+//Esta linea es para la URL de retorno para acceder o login
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = new PathString("/"); //Ruta del Login
+    options.AccessDeniedPath = new PathString("/User/Home/Index/Bloqueado");
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);// Tiempo de inactividad
+    options.SlidingExpiration = true;//Renueva el tiempo si el usuario sigue activo
+});
+
 builder.Services.AddControllersWithViews();
+
+//Builder Utilidad de Encriptar GUID
+builder.Services.AddSingleton<ProtectorUtils>();
 
 //Agregar contenedor de trabajo al contenedor IoC de inyeccion de dependiencias
 builder.Services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
@@ -49,14 +63,24 @@ app.MapControllerRoute(
     pattern: "authenticator",
     defaults: new { area = "User", controller = "Home", action = "VerificarCodigoAutenticador" });
 
+app.MapControllerRoute(
+    name: "ActivarAuthenticator",
+    pattern: "ActivarAuthenticator",
+    defaults: new { area = "User", controller = "Home", action = "ActivarAutenticador" });
+
+app.MapControllerRoute(
+    name: "/",
+    pattern: "/",
+    defaults: new { area = "User", controller = "Home", action = "Index" });
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-//Se agrega la autenticacion
-app.UseAuthorization();
-app.UseAuthentication();
+
+app.UseAuthentication();  // Primero autenticación (establece User)
+app.UseAuthorization();   // Luego autorización (evalúa User)
 
 
 app.MapControllerRoute(

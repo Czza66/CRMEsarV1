@@ -9,7 +9,7 @@ using CRMEsar.Models;
 
 namespace CRMEsar.AccesoDatos.Data.Repository
 {
-    public class EstadoRepository : Repository<Estado>, IEstadoRepository
+    public class EstadoRepository : Repository<Estados>, IEstadoRepository
     {
         private readonly ApplicationDbContext _db;
         public EstadoRepository(ApplicationDbContext db) : base(db)
@@ -17,7 +17,7 @@ namespace CRMEsar.AccesoDatos.Data.Repository
             _db = db;
         }
 
-        public void Update(Estado estado)
+        public void Update(Estados estado)
         {
             var objDesdeDB = _db.Estado.FirstOrDefault(e => e.EstadoId == estado.EstadoId);
             if (objDesdeDB != null) 

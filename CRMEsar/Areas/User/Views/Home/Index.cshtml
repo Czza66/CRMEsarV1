@@ -73,6 +73,12 @@
                         @TempData["ErrorLogin"]
                     </div>
                 }
+                @if (TempData["CerrarSesion"] != null)
+                {
+                    <div class="alert alert-success text-center">
+                        @TempData["CerrarSesion"]
+                    </div>
+                }
                 </form>
 
                 <p class="text-center mt-3">

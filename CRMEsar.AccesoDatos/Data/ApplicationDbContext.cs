@@ -13,6 +13,7 @@ namespace CRMEsar.Data
         }
         //Aqui Se deben agregar los modelos que se vayan creando
         public DbSet<ApplicationUser> AspNetUsers { get; set; }
-        public DbSet<Estado> Estado { get; set; }
+        public DbSet<Entidades> Entidad { get; set; }
+        public DbSet<Estados> Estado { get; set; }
     }
 }
