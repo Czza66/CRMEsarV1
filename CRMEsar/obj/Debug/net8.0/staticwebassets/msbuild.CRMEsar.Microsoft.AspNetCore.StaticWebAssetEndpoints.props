@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CRMEsar.rrozywtj20.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-J9qqA2Zmv0MUblsUggkCISmrfe08nLhpGDpA640qAg4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2260"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022J9qqA2Zmv0MUblsUggkCISmrfe08nLhpGDpA640qAg4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 29 Mar 2025 21:02:06 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2260"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022J9qqA2Zmv0MUblsUggkCISmrfe08nLhpGDpA640qAg4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 01:34:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CRMEsar/CRMEsar.rrozywtj20.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\CRMEsar.rrozywtj20.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rrozywtj20"},{"Name":"integrity","Value":"sha256-J9qqA2Zmv0MUblsUggkCISmrfe08nLhpGDpA640qAg4="},{"Name":"label","Value":"_content/CRMEsar/CRMEsar.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2260"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022J9qqA2Zmv0MUblsUggkCISmrfe08nLhpGDpA640qAg4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 29 Mar 2025 21:02:06 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2260"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022J9qqA2Zmv0MUblsUggkCISmrfe08nLhpGDpA640qAg4=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 01:34:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/CRMEsar/css/_LayoutLogin.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\_LayoutLogin.css'))</AssetFile>

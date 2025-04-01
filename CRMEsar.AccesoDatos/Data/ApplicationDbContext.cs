@@ -15,5 +15,7 @@ namespace CRMEsar.Data
         public DbSet<ApplicationUser> AspNetUsers { get; set; }
         public DbSet<Entidades> Entidad { get; set; }
         public DbSet<Estados> Estado { get; set; }
+        public DbSet<Modulos> Modulos { get; set; }
+
     }
 }

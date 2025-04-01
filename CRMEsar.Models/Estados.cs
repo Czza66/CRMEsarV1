@@ -37,5 +37,7 @@ namespace CRMEsar.Models
         // Relación con AspNetUser (uno a muchos)
         public ICollection<ApplicationUser>? ApplicationUser { get; set; }
 
+        public ICollection <Modulos>? Modulos { get; set; }
+
     }
 }

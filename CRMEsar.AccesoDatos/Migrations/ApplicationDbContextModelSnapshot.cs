@@ -185,6 +185,39 @@ namespace CRMEsar.AccesoDatos.Migrations
                     b.ToTable("Estado");
                 });
 
+            modelBuilder.Entity("CRMEsar.Models.Modulos", b =>
+                {
+                    b.Property<Guid>("moduloId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("EstadoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("descripcionCorta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("icono")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("orden")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("visible")
+                        .HasColumnType("bit");
+
+                    b.HasKey("moduloId");
+
+                    b.HasIndex("EstadoId");
+
+                    b.ToTable("Modulos");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
                 {
                     b.Property<Guid>("Id")
@@ -336,6 +369,15 @@ namespace CRMEsar.AccesoDatos.Migrations
                     b.Navigation("Entidad");
                 });
 
+            modelBuilder.Entity("CRMEsar.Models.Modulos", b =>
+                {
+                    b.HasOne("CRMEsar.Models.Estados", "Estado")
+                        .WithMany("Modulos")
+                        .HasForeignKey("EstadoId");
+
+                    b.Navigation("Estado");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
@@ -395,6 +437,8 @@ namespace CRMEsar.AccesoDatos.Migrations
             modelBuilder.Entity("CRMEsar.Models.Estados", b =>
                 {
                     b.Navigation("ApplicationUser");
+
+                    b.Navigation("Modulos");
                 });
 #pragma warning restore 612, 618
         }

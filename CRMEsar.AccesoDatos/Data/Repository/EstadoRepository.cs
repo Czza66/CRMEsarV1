@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
 using CRMEsar.Data;
 using CRMEsar.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CRMEsar.AccesoDatos.Data.Repository
 {
@@ -17,6 +18,19 @@ namespace CRMEsar.AccesoDatos.Data.Repository
             _db = db;
         }
 
+        public IEnumerable<SelectListItem> GetListaEstados(string EntidadNormalizada)
+        {
+            return _db.Estado
+            .Where(e => e.Entidad.NormalizedName == EntidadNormalizada)
+            .OrderBy(e => e.Nombre)
+            .Select(i => new SelectListItem
+            {
+                Text = i.Nombre,
+                Value = i.EstadoId.ToString()
+            });
+        }
+
+
         public void Update(Estados estado)
         {
             var objDesdeDB = _db.Estado.FirstOrDefault(e => e.EstadoId == estado.EstadoId);
@@ -26,7 +40,9 @@ namespace CRMEsar.AccesoDatos.Data.Repository
                 objDesdeDB.Descripcion = estado.Descripcion;
                 objDesdeDB.NormalizedName = estado.NormalizedName;
                 objDesdeDB.Activo = estado.Activo;
+                objDesdeDB.EstadoId = estado.EstadoId;
             }
         }
+
     }
 }
