@@ -13,7 +13,7 @@
             <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
                 <div class="carousel-inner h-100">
                     <div class="carousel-item active h-100">
-                        <img src="~/img/login/Asus.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
+                        <img src="~/img/login/ImagenDeMuestra.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Organización</h5>
                             <p>Esta imagen es de prueba</p>
@@ -26,9 +26,9 @@
         <!-- Login -->
         <div class="col-lg-5 p-4 bg-white d-flex flex-column justify-content-center">
             <div class="text-center mb-3">
-                <img src="~/img/login/LogoLogin.png" alt="Logo Fundación Orientame" style="max-height: 50px;" />
+                <img src="~/img/login/LogoLogin.png" alt="Logo Fundación Orientame" style="max-height: 80px;" />
             </div>
-            <p class="text-center text-muted">Para proteger tu cuenta, debes configurar el doble factor de autenticacion escaneando este codigo QR:</p>
+            <p class="text-center text-muted">Para proteger tu cuenta, debes configurar el doble factor de autenticación escaneando este código QR:</p>
 
             <form method="post">
                 <div class="text-danger" asp-validation-summary="All"></div>
@@ -40,7 +40,7 @@
                 <br />
                 <div class="mb-3">
                     <label asp-for="code"></label>
-                    <input type="text" asp-for="code" class="form-control" placeholder="Escribe el codigo de tu autenticador" />
+                    <input type="text" asp-for="code" class="form-control" placeholder="Escribe el código de tu autenticador" />
                     <span asp-validation-for="code" class="text-danger"></span>
                 </div>
                 <div class="d-grid">

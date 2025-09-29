@@ -1,18 +1,19 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using CRMEsar.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRMEsar.Areas.Panel.Controllers
 {
     [Area("Panel")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Prestador")]
     public class RoleController : Controller
     {
-        private readonly RoleManager<IdentityRole<Guid>> _roleManager;
+        private readonly RoleManager<ApplicationRole> _roleManager;
 
-        public RoleController(RoleManager<IdentityRole<Guid>> roleManager)
+        public RoleController(RoleManager<ApplicationRole> roleManager)
         {
-            _roleManager = roleManager; 
+            _roleManager = roleManager;
         }
 
         [HttpGet]
@@ -44,7 +45,11 @@ namespace CRMEsar.Areas.Panel.Controllers
                 return View();
             }
 
-            var resultado = await _roleManager.CreateAsync(new IdentityRole<Guid> { Id = Guid.NewGuid(), Name = nombre });
+            var resultado = await _roleManager.CreateAsync(new ApplicationRole
+            {
+                Id = Guid.NewGuid(),
+                Name = nombre
+            });
 
             if (resultado.Succeeded)
                 return RedirectToAction(nameof(Index));
@@ -52,7 +57,6 @@ namespace CRMEsar.Areas.Panel.Controllers
             ModelState.AddModelError("", "Error al crear el rol");
             return View();
         }
-
-
     }
+
 }

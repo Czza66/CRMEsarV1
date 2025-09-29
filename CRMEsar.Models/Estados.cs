@@ -38,6 +38,7 @@ namespace CRMEsar.Models
         public ICollection<ApplicationUser>? ApplicationUser { get; set; }
 
         public ICollection <Modulos>? Modulos { get; set; }
+        public ICollection <ModulosSecciones>? ModulosSecciones { get; set; }
 
     }
 }

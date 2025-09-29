@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRMEsar.AccesoDatos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cb3422545c0e315f6ed9adf3af28d8e10843c26")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRMEsar.AccesoDatos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRMEsar.AccesoDatos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

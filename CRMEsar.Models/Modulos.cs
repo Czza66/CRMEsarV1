@@ -31,5 +31,8 @@ namespace CRMEsar.Models
         [ForeignKey("EstadoId")]
         public Guid EstadoId { get; set; }
         public Estados Estado { get; set; }
+        //Campos Foraneos
+        public ICollection<ModulosSecciones>? ModulosSecciones { get; set; }
+        public ICollection<PermisosModulosSecciones>? permisosModulosSecciones { get; set; }
     }
 }

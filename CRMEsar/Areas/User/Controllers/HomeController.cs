@@ -1,10 +1,13 @@
-using System.Diagnostics;
+Ôªøusing System.Diagnostics;
 using System.Security.Claims;
 using System.Security.Policy;
 using System.Text.Encodings.Web;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
+using CRMEsar.AccesoDatos.Services.Logs;
+using CRMEsar.AccesoDatos.Services.Notificaciones;
 using CRMEsar.Models;
 using CRMEsar.Models.ViewModels.Login;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +25,8 @@ namespace CRMEsar.Areas.User.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         public readonly UrlEncoder _urlEncoder;
         public readonly IContenedorTrabajo _contenedorTrabajo;
+        private readonly ILogService _logService;
+        private readonly INotificacionesService _notificaciones;
 
         private const string NombreEntidadNormalizado = "ASPNETUSERS";
 
@@ -29,13 +34,17 @@ namespace CRMEsar.Areas.User.Controllers
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             UrlEncoder urlEncoder,
-            IContenedorTrabajo contenedorTrabajo)
+            IContenedorTrabajo contenedorTrabajo,
+            ILogService logService,
+            INotificacionesService notificaciones)
         {
             _logger = logger;
             _userManager = userManager;
             _signInManager = signInManager;
             _urlEncoder = urlEncoder;
             _contenedorTrabajo = contenedorTrabajo;
+            _logService = logService;
+            _notificaciones = notificaciones;
         }
         [HttpGet]
         public IActionResult Index()
@@ -67,7 +76,7 @@ namespace CRMEsar.Areas.User.Controllers
 
             if (estadoActivo == null)
             {
-                ModelState.AddModelError(string.Empty, "No se encontrÛ el estado activo para esta entidad.");
+                ModelState.AddModelError(string.Empty, "No se encontr√≥ el estado activo para esta entidad.");
                 return View(rVM);
             }
 
@@ -89,6 +98,14 @@ namespace CRMEsar.Areas.User.Controllers
             var resultado = await _userManager.CreateAsync(user, rVM.Password);
             if (resultado.Succeeded)
             {
+                await _notificaciones.CrearNotificacionAsync(
+                    userId: user.Id.ToString(),
+                    titulo:"Bienvenida/o a nuestro CRM",
+                    mensaje:"Por favor verifica tu correo electronico para evitar bloquear tu cuenta",
+                    nombreTabla:"ApplicationUser",
+                    tipoNotificacionNormalizedName: "SUCCES" //MISTAKE, WARNING
+                    );
+
                 await _userManager.AddToRoleAsync(user, "Admin");
                 return RedirectToAction("Index", new { correcto = true });
             }
@@ -106,11 +123,11 @@ namespace CRMEsar.Areas.User.Controllers
 
                 if (user == null)
                 {
-                    TempData["ErrorLogin"] = "Usuario o contraseÒa inv·lidos.";
+                    TempData["ErrorLogin"] = "Usuario o contrase√±a inv√°lidos.";
                     return RedirectToAction(nameof(Index));
                 }
 
-                // Validar que el usuario estÈ ACTIVO
+                // Validar que el usuario est√© ACTIVO
                 var estadoActivo = _contenedorTrabajo.Estado.GetFirstOrDefault(
                     e => e.Nombre == "Activo" &&
                          e.Entidad.NormalizedName == NombreEntidadNormalizado,
@@ -140,7 +157,14 @@ namespace CRMEsar.Areas.User.Controllers
                 {
                     return View("Bloqueado");
                 }
-                TempData["ErrorLogin"] = "Usuario o contraseÒa inv·lidos.";
+                await _logService.RegistrarAsync<ApplicationUser>(
+                    user.Id.ToString(),
+                    "INICIOSESION",
+                    user,
+                    false,
+                    "Inicio de sesion incorrecto por contrase√±a o correo"
+                    );
+                TempData["ErrorLogin"] = "Usuario o contrase√±a inv√°lidos.";
                 return RedirectToAction(nameof(Index));
             }
             return View(Login);
@@ -183,7 +207,16 @@ namespace CRMEsar.Areas.User.Controllers
 
                 await _signInManager.SignInAsync(usuario, isPersistent: false);
 
-                return RedirectToAction(nameof(ConfirmacionAutenticador));
+                await _logService.RegistrarAsync<ApplicationUser>(
+                    usuario.Id.ToString(),
+                    "2FA",
+                    usuario,
+                    true,
+                    "El usuario configuro el 2FA de microsoft authenticator"
+                    );
+
+                TempData["VerificacionCorrecta"] = "Intenta iniciar sesion de nuevo";
+                return RedirectToAction("Index", "Home", new { area = "User" });
             }
             TempData["ErrorAuth"] = "El Codigo no coincide, intentalo de nuevo";
             adf.Token = await _userManager.GetAuthenticatorKeyAsync(usuario);
@@ -213,31 +246,50 @@ namespace CRMEsar.Areas.User.Controllers
             return View(new VerificarAutenticadorVM { RecordarDatos = recordarDatos });
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowAnonymous]
         public async Task<IActionResult> VerificarCodigoAutenticador(VerificarAutenticadorVM vaVM)
         {
             vaVM.returnURL = vaVM.returnURL ?? Url.Content("~/");
+
             if (!ModelState.IsValid)
             {
                 return View(vaVM);
             }
+
             var resultado = await _signInManager.TwoFactorAuthenticatorSignInAsync(vaVM.code, vaVM.RecordarDatos, rememberClient: false);
+
             if (resultado.Succeeded)
             {
-                var claims = User.Claims.ToList();
+                var usuario = await _signInManager.GetTwoFactorAuthenticationUserAsync();
+
+                // Esta es la clave para que se generen los claims correctamente
+                var principal = await _signInManager.CreateUserPrincipalAsync(usuario);
+                await _signInManager.SignOutAsync(); // Salir de cualquier sesi√≥n anterior
+                await _signInManager.Context.SignInAsync(IdentityConstants.ApplicationScheme, principal);
+
+                // Confirmamos si ahora los claims est√°n
+                var claims = principal.Claims.ToList();
+                await _logService.RegistrarAsync<ApplicationUser>(
+                    usuario.Id.ToString(),
+                    "INICIOSESION",
+                    usuario,
+                    true,
+                    "Inicio de sesion correcto"
+                    );
+
                 return RedirectToAction("Index", "Home", new { area = "Panel" });
             }
+
             if (resultado.IsLockedOut)
             {
                 return View("Bloqueado");
             }
-            else
-            {
-                ModelState.AddModelError(string.Empty, "Codigo Invalido");
-                return View(vaVM);
-            }
+
+            ModelState.AddModelError(string.Empty, "Codigo Invalido");
+            return View(vaVM);
         }
     }
 }

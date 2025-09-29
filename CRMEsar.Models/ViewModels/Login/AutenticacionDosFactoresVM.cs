@@ -10,8 +10,8 @@ namespace CRMEsar.Models.ViewModels.Login
     public class AutenticacionDosFactoresVM
     {
         //Acceso (Login)
-        [Required(ErrorMessage ="El codigo del autenticador es requerido")]
-        [Display(Name = "Codigo del Autenticador")]
+        [Required(ErrorMessage ="El código del autenticador es requerido")]
+        [Display(Name = "Código del Autenticador")]
         public string code { get; set; }
 
         //Para el registro

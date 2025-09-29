@@ -26,5 +26,10 @@ namespace CRMEsar.Models
         [ForeignKey("EstadoId")]
         public Guid? EstadoId { get; set; }
         public Estados? Estado { get; set; }
+
+        //Campos Foraneos
+        public Guid? PaisId { get; set; }
+        [ForeignKey("PaisId")]
+        public Paises? Pais { get; set; }
     }
 }

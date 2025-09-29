@@ -10,7 +10,7 @@
             <h2 class="text-primary"> Lista de estados</h2>
         </div>
         <div class="col-4 text-right">
-            <a asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i>&nbsp; Agregar Estado</a>
+            <a asp-action="Create" class="btn" style="background:#1B75BB ; color:white;border:none"><i class="fa fa-plus"></i>&nbsp; Agregar Estado</a>
         </div>
     </div>
     <br />
@@ -43,11 +43,11 @@
                         <td>@estados.FechaCreacion.ToString("dd/MM/yyyy")</td>
                         <td>@(estados.Activo ? "Activo" : "Inactivo")</td>
                         <td>
-                            <a asp-route-id="@estados.EstadoIdEncriptado" asp-action="Edit" class="btn btn-success text-white" style="cursor:pointer; width:140px;">
+                            <a asp-route-id="@estados.EstadoIdEncriptado" asp-action="Edit" class="btn form-control" style="background:#C63D96 ; color:white;border:none;cursor:pointer; width:140px;">
                                 <i class="far fa-edit"></i> Editar
                             </a>
                             &nbsp;
-                            <a onclick=Delete() class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
+                            <a onclick=Delete() class="btn form-control" style="background:#EE3A4F ; color:white;border:none;cursor:pointer; width:140px;">
                                 <i class="far fa-trash-alt"></i> Borrar
                             </a>
                         </td>

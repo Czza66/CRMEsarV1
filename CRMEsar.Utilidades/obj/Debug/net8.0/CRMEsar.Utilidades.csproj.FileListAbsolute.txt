@@ -22,3 +22,16 @@ C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Utilidades\obj\Debug\net8.0\
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.pdb
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Utilidades\obj\Debug\net8.0\ref\CRMEsar.Utilidades.dll
 C:\Users\GAMER\source\repos\SolucionCRMEsar\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\bin\Debug\net8.0\CRMEsar.Utilidades.deps.json
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\bin\Debug\net8.0\CRMEsar.Utilidades.dll
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\bin\Debug\net8.0\CRMEsar.Utilidades.pdb
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.AssemblyInfo.cs
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.sourcelink.json
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.dll
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\refint\CRMEsar.Utilidades.dll
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\CRMEsar.Utilidades.pdb
+C:\Users\PC\Documents\DESARROLLOS\CRMEsarV1\CRMEsar.Utilidades\obj\Debug\net8.0\ref\CRMEsar.Utilidades.dll

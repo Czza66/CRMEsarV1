@@ -1,54 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\panel\\controllers\\moduloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\panel\\controllers\\moduloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|c:\\users\\gamer\\source\\repos\\solucioncrmesar\\crmesar\\areas\\panel\\views\\modulos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A43677DF-F4BF-4045-9E0A-B6396DEE176E}|CRMEsar.csproj|solutionrelative:areas\\panel\\views\\modulos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\PC\\Documents\\DESARROLLOS\\CRMEsarV1\\CRMEsar\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 221,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Views\\Modulos\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Panel\\Views\\Modulos\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Views\\Modulos\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Panel\\Views\\Modulos\\Edit.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAQwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T03:23:30.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ModulosController.cs",
-              "DocumentMoniker": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Controllers\\ModulosController.cs",
-              "RelativeDocumentMoniker": "Areas\\Panel\\Controllers\\ModulosController.cs",
-              "ToolTip": "C:\\Users\\GAMER\\source\\repos\\SolucionCRMEsar\\CRMEsar\\Areas\\Panel\\Controllers\\ModulosController.cs",
-              "RelativeToolTip": "Areas\\Panel\\Controllers\\ModulosController.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAAwGsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T03:13:02.786Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

@@ -36,17 +36,13 @@
             @Html.DropDownListFor(c => c.EstadoId, Model.ListaEstados, new { @class = "form-control" })
             <span asp-validation-for="EstadoId" class="text-danger"></span>
         </div>
-        <div class="form-check mb-3">
-            <!-- fallback cuando no está marcado -->
-            <input type="hidden" name="visible" value="false" />
-
-            <!-- checkbox verdadero -->
-            <input type="checkbox" name="visible" value="true"
-                   class="form-check-input"
-                   id="visibleCheck"
-            @(Model.visible ? "checked" : "") />
-
-            <label class="form-check-label" for="visibleCheck">¿Visible?</label>
+        <div class="mb-3">
+            <label asp-for="visible" class="form-label">¿Modulo visible?</label>
+            <select asp-for="visible" class="form-select">
+                <option value="false">No</option>
+                <option value="true">Sí</option>
+            </select>
+            <span asp-validation-for="visible" class="text-danger"></span>
         </div>
         <div class="mt-4">
             <partial name="_VistaEditarVolver" />

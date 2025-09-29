@@ -1,8 +1,12 @@
 using CRMEsar.AccesoDatos.Data.Repository;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
+using CRMEsar.AccesoDatos.Services.Logs;
+using CRMEsar.AccesoDatos.Services.Menu;
+using CRMEsar.AccesoDatos.Services.Notificaciones;
 using CRMEsar.Data;
 using CRMEsar.Models;
 using CRMEsar.Utilidades;
+using CRMEsar.Utilidades.ConfirmarCorreo;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,10 +20,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 //Agregamos el servicio de Identity a la aplicacion
-builder.Services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
-    .AddRoles<IdentityRole<Guid>>()
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()
+    .AddRoles<ApplicationRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+// Agrega esta línea para que los claims del rol se agreguen correctamente
+builder.Services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>,
+    CustomClaimsPrincipalFactory>();
 
 //Esta linea es para la URL de retorno para acceder o login
 builder.Services.ConfigureApplicationCookie(options =>
@@ -35,8 +43,20 @@ builder.Services.AddControllersWithViews();
 //Builder Utilidad de Encriptar GUID
 builder.Services.AddSingleton<ProtectorUtils>();
 
+//--------------------------------------InyectarServicios
+
 //Agregar contenedor de trabajo al contenedor IoC de inyeccion de dependiencias
 builder.Services.AddScoped<IContenedorTrabajo, ContenedorTrabajo>();
+builder.Services.AddScoped<IMenuService, MenuService>();
+
+builder.Services.AddScoped<ILogService, LogService>(); // LogService
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<INotificacionesService, NotificacionesService>();
+
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<IConfirmarCorreo, ConfirmarCorreo>();
+//---------------------------------------------------
 
 builder.Services.AddRazorPages();
 var app = builder.Build();

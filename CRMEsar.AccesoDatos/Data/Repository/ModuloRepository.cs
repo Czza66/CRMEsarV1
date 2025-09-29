@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using CRMEsar.AccesoDatos.Data.Repository.IRepository;
 using CRMEsar.Data;
 using CRMEsar.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CRMEsar.AccesoDatos.Data.Repository
 {
@@ -17,6 +20,16 @@ namespace CRMEsar.AccesoDatos.Data.Repository
         {
             _db = db;
         }
+        public IEnumerable<SelectListItem> GetListaModulos()
+        {
+            return _db.Modulos
+                .Select(i => new SelectListItem
+                {
+                    Text = i.nombre,
+                    Value = i.moduloId.ToString()
+                });
+        }
+
 
         public void update(Modulos modulos)
         {

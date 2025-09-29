@@ -22,6 +22,34 @@ namespace CRMEsar.AccesoDatos.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("CRMEsar.Models.ApplicationRole", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
             modelBuilder.Entity("CRMEsar.Models.ApplicationUser", b =>
                 {
                     b.Property<Guid>("Id")
@@ -90,6 +118,9 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("PaisId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -124,7 +155,55 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
+                    b.HasIndex("PaisId");
+
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.AspNetUserLogs", b =>
+                {
+                    b.Property<Guid>("LogId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Exitoso")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IpAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreTabla")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RecordId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Respuesta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoAccion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserAgent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("LogId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogs");
                 });
 
             modelBuilder.Entity("CRMEsar.Models.Entidades", b =>
@@ -165,6 +244,9 @@ namespace CRMEsar.AccesoDatos.Migrations
                     b.Property<Guid>("EntidadId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("EntidadesEntidadId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime2");
 
@@ -182,7 +264,46 @@ namespace CRMEsar.AccesoDatos.Migrations
 
                     b.HasIndex("EntidadId");
 
+                    b.HasIndex("EntidadesEntidadId");
+
                     b.ToTable("Estado");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Integraciones", b =>
+                {
+                    b.Property<Guid>("IntegracionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Activa")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("EndpointURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JsonSchema")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoIntegracion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("fechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("metodoHttp")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IntegracionId");
+
+                    b.ToTable("Integraciones");
                 });
 
             modelBuilder.Entity("CRMEsar.Models.Modulos", b =>
@@ -191,7 +312,7 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("EstadoId")
+                    b.Property<Guid>("EstadoId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("descripcionCorta")
@@ -218,32 +339,183 @@ namespace CRMEsar.AccesoDatos.Migrations
                     b.ToTable("Modulos");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
+            modelBuilder.Entity("CRMEsar.Models.ModulosSecciones", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("seccionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
+                    b.Property<Guid>("EstadoId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ModuloId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("action")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                    b.Property<string>("area")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("controller")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("descripcion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("orden")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("seccionPadreId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("visible")
+                        .HasColumnType("bit");
+
+                    b.HasKey("seccionId");
+
+                    b.HasIndex("EstadoId");
+
+                    b.HasIndex("ModuloId");
+
+                    b.HasIndex("seccionPadreId");
+
+                    b.ToTable("ModulosSecciones");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Notificaciones", b =>
+                {
+                    b.Property<Guid>("NotificacionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("EstaLeido")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Mensaje")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreTabla")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TipoNotificacionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("NotificacionId");
+
+                    b.HasIndex("TipoNotificacionId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Notificaciones");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Paises", b =>
+                {
+                    b.Property<Guid>("PaisId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("codigoInternacional")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
+                    b.HasKey("PaisId");
 
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("Paises");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.PermisosModulosSecciones", b =>
+                {
+                    b.Property<Guid>("PermisoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("FechaFin")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("FechaInicio")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("ModuloId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RolId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SeccionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("Temporal")
+                        .HasColumnType("bit");
+
+                    b.HasKey("PermisoId");
+
+                    b.HasIndex("ModuloId");
+
+                    b.HasIndex("RolId");
+
+                    b.HasIndex("SeccionId");
+
+                    b.ToTable("PermisosModulosSecciones");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.TipoNotificaciones", b =>
+                {
+                    b.Property<Guid>("tipoNotificacionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ColorHexadecimal")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NormalizedName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("icono")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("tipoNotificacionId");
+
+                    b.ToTable("TipoNotificaciones");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -355,16 +627,37 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .WithMany("ApplicationUser")
                         .HasForeignKey("EstadoId");
 
+                    b.HasOne("CRMEsar.Models.Paises", "Pais")
+                        .WithMany()
+                        .HasForeignKey("PaisId");
+
                     b.Navigation("Estado");
+
+                    b.Navigation("Pais");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.AspNetUserLogs", b =>
+                {
+                    b.HasOne("CRMEsar.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("CRMEsar.Models.Estados", b =>
                 {
                     b.HasOne("CRMEsar.Models.Entidades", "Entidad")
-                        .WithMany("Estados")
+                        .WithMany()
                         .HasForeignKey("EntidadId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("CRMEsar.Models.Entidades", null)
+                        .WithMany("Estados")
+                        .HasForeignKey("EntidadesEntidadId");
 
                     b.Navigation("Entidad");
                 });
@@ -373,14 +666,88 @@ namespace CRMEsar.AccesoDatos.Migrations
                 {
                     b.HasOne("CRMEsar.Models.Estados", "Estado")
                         .WithMany("Modulos")
-                        .HasForeignKey("EstadoId");
+                        .HasForeignKey("EstadoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("Estado");
                 });
 
+            modelBuilder.Entity("CRMEsar.Models.ModulosSecciones", b =>
+                {
+                    b.HasOne("CRMEsar.Models.Estados", "Estado")
+                        .WithMany("ModulosSecciones")
+                        .HasForeignKey("EstadoId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CRMEsar.Models.Modulos", "Modulo")
+                        .WithMany("ModulosSecciones")
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CRMEsar.Models.ModulosSecciones", "seccionPadre")
+                        .WithMany()
+                        .HasForeignKey("seccionPadreId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Estado");
+
+                    b.Navigation("Modulo");
+
+                    b.Navigation("seccionPadre");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Notificaciones", b =>
+                {
+                    b.HasOne("CRMEsar.Models.TipoNotificaciones", "TipoNotificaciones")
+                        .WithMany()
+                        .HasForeignKey("TipoNotificacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("CRMEsar.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TipoNotificaciones");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.PermisosModulosSecciones", b =>
+                {
+                    b.HasOne("CRMEsar.Models.Modulos", "Modulo")
+                        .WithMany("permisosModulosSecciones")
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CRMEsar.Models.ApplicationRole", "applicationRole")
+                        .WithMany("PermisosModulosSecciones")
+                        .HasForeignKey("RolId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CRMEsar.Models.ModulosSecciones", "Seccion")
+                        .WithMany("permisosModulosSecciones")
+                        .HasForeignKey("SeccionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Modulo");
+
+                    b.Navigation("Seccion");
+
+                    b.Navigation("applicationRole");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
+                    b.HasOne("CRMEsar.Models.ApplicationRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -407,7 +774,7 @@ namespace CRMEsar.AccesoDatos.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
+                    b.HasOne("CRMEsar.Models.ApplicationRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -429,6 +796,11 @@ namespace CRMEsar.AccesoDatos.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("CRMEsar.Models.ApplicationRole", b =>
+                {
+                    b.Navigation("PermisosModulosSecciones");
+                });
+
             modelBuilder.Entity("CRMEsar.Models.Entidades", b =>
                 {
                     b.Navigation("Estados");
@@ -439,6 +811,20 @@ namespace CRMEsar.AccesoDatos.Migrations
                     b.Navigation("ApplicationUser");
 
                     b.Navigation("Modulos");
+
+                    b.Navigation("ModulosSecciones");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.Modulos", b =>
+                {
+                    b.Navigation("ModulosSecciones");
+
+                    b.Navigation("permisosModulosSecciones");
+                });
+
+            modelBuilder.Entity("CRMEsar.Models.ModulosSecciones", b =>
+                {
+                    b.Navigation("permisosModulosSecciones");
                 });
 #pragma warning restore 612, 618
         }

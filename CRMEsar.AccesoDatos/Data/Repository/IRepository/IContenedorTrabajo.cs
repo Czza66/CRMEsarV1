@@ -12,6 +12,12 @@ namespace CRMEsar.AccesoDatos.Data.Repository.IRepository
         IEstadoRepository Estado { get; }
         IEntidadRepository Entidad { get; }
         IModuloRepository Modulo { get; }
+        IModulosSeccionesRepository ModulosSecciones { get; }
+        IPermisosModulosSeccionesRepository PermisosModulosSecciones { get; }
+        ILogRepository Log { get; }
+        ITipoNotificacionesRepository TipoNotificaciones { get; }
+        INotificacionesRepository Notificaciones { get; }
+        IIntegracionesRepository Integraciones { get; }
 
         void Save();
     }

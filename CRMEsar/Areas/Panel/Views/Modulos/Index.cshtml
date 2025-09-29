@@ -10,7 +10,7 @@
             <h2 class="text-primary"> Lista de modulos</h2>
         </div>
         <div class="col-4 text-right">
-            <a asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i>&nbsp; Agregar modulo</a>
+            <a asp-action="Create" class="btn btn-primary" style="background:#1B75BB ; color:white;border:none"><i class="bi bi-plus-circle-fill"></i>&nbsp; Agregar modulo</a>
         </div>
     </div>
     <br />
@@ -41,13 +41,13 @@
                         <td>@modulos.Nombre</td>
                         <td>@modulos.DescripcionCorta</td>
                         <td>@modulos.orden</td>
-                        <td>@(modulos.visible ? "Activo" : "Inactivo")</td>
+                        <td>@(modulos.visible ? "Si" : "No")</td>
                         <td>
-                            <a asp-route-id="@modulos.ModuloIdEncriptado" asp-action="Edit" class="btn btn-success text-white" style="cursor:pointer; width:140px;">
+                            <a asp-route-id="@modulos.ModuloIdEncriptado" asp-action="Edit" class="btn btn-success text-white" style="background:#C63D96 ; color:white;border:none;cursor:pointer; width:140px;">
                                 <i class="far fa-edit"></i> Editar
                             </a>
                             &nbsp;
-                            <a onclick=Delete() class="btn btn-danger text-white" style="cursor:pointer; width:140px;">
+                            <a onclick=Delete() class="btn btn-danger text-white" style="background:#EE3A4F ; color:white;border:none;cursor:pointer; width:140px;">
                                 <i class="far fa-trash-alt"></i> Borrar
                             </a>
                         </td>

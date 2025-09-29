@@ -19,7 +19,7 @@ namespace CRMEsar.Models.ViewModels.Login
         [Display(Name = "Contraseña")]
         public string Password { get; set; }
 
-        [Display(Name = "Recuerdame")]
+        [Display(Name = "Recuérdame")]
         public bool RememberMe { get; set; }
     }
 }

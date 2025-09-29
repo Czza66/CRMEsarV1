@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CRMEsar.Areas.Panel.Controllers
 {
     [Area("Panel")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Prestador")]
     public class EstadosController : Controller
     {
         private readonly IContenedorTrabajo _contenedorTrabajo;

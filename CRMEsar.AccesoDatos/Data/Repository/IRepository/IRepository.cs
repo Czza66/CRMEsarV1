@@ -33,5 +33,15 @@ namespace CRMEsar.AccesoDatos.Data.Repository.IRepository
 
         //Eliminar un registro por entidad
         void Remove(T entity);
+        Task<IEnumerable<T>> GetAllAsync(
+            Expression<Func<T, bool>>? filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>>? orderBy = null,
+            string? includeProperties = null
+        );
+
+        Task<T?> GetFirstOrDefaultAsync(
+            Expression<Func<T, bool>>? filter = null,
+            string? includeProperties = null
+        );
     }
 }

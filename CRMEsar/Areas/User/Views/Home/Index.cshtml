@@ -16,7 +16,7 @@
             <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
                 <div class="carousel-inner h-100">
                     <div class="carousel-item active h-100">
-                        <img src="~/img/login/Asus.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
+                        <img src="~/img/login/ImagenDeMuestra.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Imagen 2">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Organización</h5>
                             <p>Esta imagen es de prueba</p>
@@ -39,14 +39,14 @@
             <!-- Login -->
             <div class="col-lg-5 p-4 bg-white d-flex flex-column justify-content-center">
                 <div class="text-center mb-3">
-                    <img src="~/img/login/LogoLogin.png" alt="Logo Fundación Orientame" style="max-height: 50px;" />
+                    <img src="~/img/login/LogoLogin.png" alt="Logo Fundación Esar" style="max-height: 80px;" />
                 </div>
-                <p class="text-center text-muted">Bienvenido, ingresa tus credenciales</p>
+                <p class="text-center text-muted">Bienvenida, ingresa tus credenciales</p>
 
                 <form method="post" asp-controller="Home" asp-action="Acceso">
                     <div class="text-danger" asp-validation-summary="All"></div>
                     <div class="mb-3">
-                        <label asp-for="Email" class="form-label">Usuario</label>
+                        <label asp-for="Email" class="form-label">Usuaria</label>
                         <input asp-for="Email" type="text" class="form-control" required />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="d-grid">
-                    <button type="submit" class="btn bg-morado-Esar text-white">Autenticate &nbsp; <i class="bi bi-file-lock2-fill"></i></button>
+                    <button type="submit" class="btn bg-morado-Esar text-white">Autentícate &nbsp; <i class="bi bi-file-lock2-fill"></i></button>
                     </div>
                     <br />
                 @if (TempData["ErrorLogin"] != null)
@@ -77,6 +77,12 @@
                 {
                     <div class="alert alert-success text-center">
                         @TempData["CerrarSesion"]
+                    </div>
+                }
+                @if (TempData["VerificacionCorrecta"] != null)
+                {
+                    <div class="alert alert-success text-center">
+                        @TempData["VerificacionCorrecta"]
                     </div>
                 }
                 </form>
