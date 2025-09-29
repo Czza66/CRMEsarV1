@@ -25,3 +25,5 @@
    Una vez se ejecuten correctamente las  migraciones y creaciones de tablas... vamos a ejecutar el proyecto
 
 
+
+LA DOCUMENTACION SE ENCUENTRA EN EL PROYECTO EN LA RUTA CRMEsarV1\CRMEsar\Documentacion_Oficial
